@@ -174,7 +174,9 @@ export default function Hero() {
         setIsCalendarOpen(false);
       } else {
         setSelectedRange({ start: date, end: null });
+
         setSearchFilters({
+          
           ...searchFilters,
           checkIn: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
           checkOut: ''
