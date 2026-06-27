@@ -538,9 +538,11 @@ export default function Navbar() {
 
             {/* Auth Section - Mobile */}
             <div className="mt-4 mx-2 p-3 rounded-xl bg-white/5 border border-white/5">
-              <p className="text-[10px] uppercase tracking-wider text-gray-500 font-semibold mb-2 px-1">Account</p>
-              <div className="flex items-center gap-3 px-1">
+              <div className="flex items-center justify-between mb-2 px-1">
+                <p className="text-[10px] uppercase tracking-wider text-gray-500 font-semibold">Account</p>
                 <ThemeToggle />
+              </div>
+              <div className="flex items-center gap-3 px-1">
                 <Link
                   href="/login"
                   className="flex-1 text-center py-2.5 border border-cyan-500/30 text-cyan-300 rounded-xl font-medium hover:bg-cyan-900/20 transition-all text-sm"

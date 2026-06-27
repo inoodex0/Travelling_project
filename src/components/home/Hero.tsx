@@ -285,7 +285,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative w-screen h-screen overflow-hidden bg-black">
+      <section className="relative w-screen h-[75vh] overflow-hidden bg-black">
         {/* ====== Full Screen Background Slider ====== */}
         <div className="absolute inset-0 w-full h-full">
           {images.map((src, idx) => (
@@ -313,11 +313,11 @@ export default function Hero() {
         </div>
 
         {/* ====== Main Content ====== */}
-        <div className="relative z-20 w-full h-full px-4 md:px-8 lg:px-12 py-4 flex flex-col justify-between">
-          <div className="h-12 md:h-14" />
+        <div className="relative z-20 w-full h-full px-4 md:px-8 lg:px-12 py-1 flex flex-col justify-between">
+          <div className="h-10 md:h-12" />
 
           {/* ====== Middle Content ====== */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-center flex-1 max-w-7xl mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 items-start flex-1 max-w-7xl mx-auto w-full">
             
             {/* ====== Left Column ====== */}
             <div className="flex flex-col justify-center text-left">
@@ -484,7 +484,7 @@ export default function Hero() {
             </div>
 
             {/* ====== Right Column - Video Card ====== */}
-            <div className="flex items-center justify-end">
+            <div className="flex items-center justify-end self-center">
               <div ref={videoCardRef} className="w-full max-w-[260px] rounded-xl overflow-hidden bg-white/10 backdrop-blur-xl border border-white/10 shadow-2xl cursor-pointer group" onClick={openVideoModal}>
                 <div className="relative aspect-video">
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent" />
@@ -514,7 +514,7 @@ export default function Hero() {
           </div>
 
           {/* ====== Bottom Bar ====== */}
-          <div ref={bottomFooterRef} className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between border-t border-white/5 pt-3 pb-0 gap-2 text-[9px] tracking-[0.15em] uppercase font-semibold text-white/30">
+          <div ref={bottomFooterRef} className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between border-t border-white/5 pt-2 pb-0 gap-1 text-[9px] tracking-[0.15em] uppercase font-semibold text-white/30">
             <div className="flex items-center gap-3">
               <span>✦ Travel With Confidence</span>
               <span className="hidden sm:inline text-white/10">·</span>
@@ -528,7 +528,7 @@ export default function Hero() {
         </div>
 
         {/* Slide Dots */}
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5">
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5">
           {images.map((_, idx) => (
             <button key={idx} onClick={() => goToSlide(idx)} className={`h-1.5 rounded-full transition-all duration-500 ${activeSlide === idx ? 'bg-orange-500 w-5' : 'bg-white/25 hover:bg-white/50 w-1.5'}`} />
           ))}
